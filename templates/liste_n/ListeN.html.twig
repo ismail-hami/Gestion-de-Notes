@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Add a container with specific width -->
+    <div class="container" style="max-width: 800px;"> <!-- Adjust max-width as needed -->
+        <!-- Use table-sm class for smaller padding -->
+        <table class="table table-hover table-sm">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Module Coef</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Module in data %}
+                <tr class="table-light">
+                    <td>{{ Module.getId() }}</td>
+                    <td>{{ Module.getName() }}</td>
+                    <td>{{ Module.getCoef() }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

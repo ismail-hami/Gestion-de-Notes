@@ -1,0 +1,81 @@
+date/time         : 2026-02-28, 01:18:01, 539ms
+computer name     : DESKTOP-E080AN2
+user name         : Hp
+registered owner  : Hp
+operating system  : Windows NT New x64 build 9200
+system language   : French
+system up time    : 8 hours 22 minutes
+program up time   : 2 seconds
+processors        : 8x Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz
+physical memory   : 1371/8035 MB (free/total)
+free disk space   : (C:) 38.18 GB
+display mode      : 1280x720, 32 bit
+process id        : $404
+allocated memory  : 21.18 MB
+command line      : "C:\xampp\sendmail\sendmail.exe" -t
+executable        : sendmail.exe
+exec. date/time   : 2012-04-16 18:30
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $cbe29ac0, $812b1def, $812b1def
+exception number  : 1
+exception class   : EIdSocketError
+exception message : Socket Error # 10061 Connection refused.
+
+main thread ($13e4):
+004408e7 +0107 sendmail.exe IdIOHandlerStack               271  +30 DoConnectTimeout
+00440b4c +01d8 sendmail.exe IdIOHandlerStack               346  +55 TIdIOHandlerStack.ConnectClient
+0046554d +0031 sendmail.exe IdSSLOpenSSL                  2086   +8 TIdSSLIOHandlerSocketOpenSSL.ConnectClient
+00444a9f +0063 sendmail.exe IdIOHandlerSocket              335  +13 TIdIOHandlerSocket.Open
+00465637 +0007 sendmail.exe IdSSLOpenSSL                  2122   +1 TIdSSLIOHandlerSocketOpenSSL.Open
+0044157d +0235 sendmail.exe IdTCPClient                    318  +53 TIdTCPClientCustom.Connect
+00445cc8 +00a4 sendmail.exe IdExplicitTLSClientServerBase  257  +23 TIdExplicitTLSClient.Connect
+0045ab7b +0017 sendmail.exe IdSMTP                         373   +2 TIdSMTP.Connect
+004b5f14 +1060 sendmail.exe sendmail                       808 +326 initialization
+76265d47 +0017 KERNEL32.DLL                                         BaseThreadInitThunk
+
+thread $47a0:
+76265d47 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $2d30:
+76265d47 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $3734:
+76265d47 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+001afcbc  ec 08 44 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..D.............
+001afccc  d0 fc 1a 00 ec 08 44 00 - 50 cc 75 02 4d 27 00 00  ......D.P.u.M'..
+001afcdc  7d 00 00 00 48 fd 1a 00 - 14 fd 1a 00 ec fc 1a 00  }...H...........
+001afcec  f8 fc 1a 00 c8 4b 40 00 - 14 fd 1a 00 20 fd 1a 00  .....K@.........
+001afcfc  c8 4b 40 00 14 fd 1a 00 - 01 04 00 00 00 00 00 00  .K@.............
+001afd0c  00 00 00 00 00 ce 70 02 - 4c fd 1a 00 51 0b 44 00  ......p.L...Q.D.
+001afd1c  4c fd 1a 00 54 fd 1a 00 - c8 4b 40 00 4c fd 1a 00  L...T....K@.L...
+001afd2c  b4 4e 4b 00 a0 41 71 02 - a0 41 71 02 90 69 74 02  .NK..Aq..Aq..it.
+001afd3c  00 00 00 00 00 00 00 00 - 00 00 00 00 a0 41 71 02  .............Aq.
+001afd4c  68 fd 1a 00 52 55 46 00 - 7c fd 1a 00 c8 4b 40 00  h...RUF.|....K@.
+001afd5c  68 fd 1a 00 b4 4e 4b 01 - a0 41 71 02 b0 fd 1a 00  h....NK..Aq.....
+001afd6c  a5 4a 44 00 a0 41 71 02 - 3c 56 46 00 83 15 44 00  .JD..Aq.<VF...D.
+001afd7c  88 fd 1a 00 5f 4d 40 00 - b0 fd 1a 00 dc fd 1a 00  ...._M@.........
+001afd8c  c8 4b 40 00 b0 fd 1a 00 - b4 4e 4b 00 a0 41 71 02  .K@......NK..Aq.
+001afd9c  40 40 71 02 12 57 46 00 - a0 41 71 02 00 00 00 00  @@q..WF..Aq.....
+001afdac  40 40 71 02 d4 fd 1a 00 - cd 5c 44 00 b4 4e 4b 00  @@q......\D..NK.
+001afdbc  ff 00 00 00 80 ab 45 00 - b4 4e 4b 00 b4 4e 4b 00  ......E..NK..NK.
+001afdcc  ff 00 00 00 40 40 71 02 - 74 ff 1a 00 1a 5f 4b 00  ....@@q.t...._K.
+001afddc  e8 fd 1a 00 c8 4b 40 00 - 74 ff 1a 00 f4 fd 1a 00  .....K@.t.......
+001afdec  c8 4b 40 00 74 ff 1a 00 - 00 fe 1a 00 5f 4d 40 00  .K@.t......._M@.
+
+disassembling:
+[...]
+004408d8       push    eax
+004408d9       mov     ecx, ebx
+004408db       mov     dl, 1
+004408dd       mov     eax, [$4352ac]
+004408e2       call    -$b1db ($43570c)       ; IdStack.EIdSocketError.CreateError
+004408e7     > call    -$3bc00 ($404cec)      ; System.@RaiseExcept
+004408ec 273   mov     eax, [ebp-4]
+004408ef       mov     edx, [eax+$48]
+004408f2       mov     eax, [$43b04c]
+004408f7       call    -$20ec8 ($41fa34)      ; IdException.EIdException.Toss
+004408fc       jmp     loc_440933
+[...]
